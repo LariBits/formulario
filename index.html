@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario de Contato</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+  <h1> Entre em contato</h1>
+
+  <form id="formulario">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="sobrenome">Sobrenome</label>
+    <input type="text" id="sobrenome" name="sobrenome" requered>
+
+    <label for="email">E-mail</label>
+    <input type="mail" id="email" name="email" requered>
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="sucessomsg" style="display: none;">Mensagem enviada com sucesso!</div>
+</main>
+  <script src="https://fonts.google.com/specimen/Karla"></script>
+  <script src="script.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">LariBits</a>.
+  </div>
+</body>
+</html>
