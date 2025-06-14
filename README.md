@@ -1,4 +1,4 @@
-# 📬 Formulário de Contato - Projeto Frontend Mentor
+# Formulário de Contato - Projeto Frontend Mentor
 
 Este é um projeto de um **formulário de contato** desenvolvido como parte de um desafio do [Frontend Mentor](https://www.frontendmentor.io/), com foco em **HTML**, **CSS** e **JavaScript** para validação básica.
 
