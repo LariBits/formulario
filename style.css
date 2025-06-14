@@ -1,54 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400&display=swap');
-.titulo{
-    margin:auto;
-
-}
-body{
-    font-family: 'karla';
-    font-size: 16px;
-    background-color: hsl(186, 15%, 59%)
-}
-.form{
-    background-color: hsl(148, 38%, 91%);
-    padding: 20px;
-    max-width: 400px;
-    margin:auto;
-    border-radius: 8px;
-    
-}
-.formulario{
-    padding: 20px;
-    max-width: 400px;
-    margin:auto;
-    border-radius: 8px;
-}
-
-label{
-    display: block;
-    margin-top: 10px;
-    border-radius: 8px;
-
-}
-input, textarea{
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
 
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-button{
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
 
-
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsl(148, 38%, 91%);
+  color: #333;
+  line-height: 1.5;
 }
-button:hover{
-    background-color: #0077cc;
-    border-radius: 8px;
+
+/* Centraliza o main */
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Formulário */
+form#contact-form {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+}
+/* Esconde o input radio original */
+input[type="radio"]#confirm {
+  display: none;
+}
+label[for="confirm"] {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;  
+  color: #333;
+  gap: 0.4rem;
+  position: relative;
+  padding-left: 22px;
+}
+label[for="confirm"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;        
+  height: 14px;
+  border: 2px solid hsl(228, 45%, 44%);
+  border-radius: 50%;
+  background: white;
+  transition: 0.2s ease;
+}
+/* Quando estiver selecionado */
+input[type="radio"]#confirm:checked + label::before {
+  background-color: hsl(228, 45%, 44%);
+  box-shadow: inset 0 0 0 3px white; 
+}
+form#contact-form .titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: hsl(228, 45%, 44%);
+  outline: none;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: 700;
+  padding: 0 0.5rem;
+}
+fieldset label {
+  font-weight: normal;
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color:  hsl(169, 82%, 27%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(186, 15%, 59%)
+}
+
+#success-message {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  border-radius: 4px;
+  font-weight: 700;
+  text-align: center;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0;
+  color: #555;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
 }
